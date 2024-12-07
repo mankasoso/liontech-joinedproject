@@ -82,7 +82,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>LION TECH ACADEMY Snapshot Nexus Repository </name>
-	      <url>http://54.177.72.129:8081/repository/online-webbapp-snapshut/</url>
+	      <url>http://54.177.72.129:8081/repository/online-webbapp-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
