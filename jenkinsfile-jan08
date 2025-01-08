@@ -1,0 +1,27 @@
+pipeline{
+   agent any
+   tools{
+     maven "maven3.9.9"
+   }
+
+   stages{
+     stage("clonefromscm"){
+       steps{
+       sh "echo 'jenkins to clone from scm'"
+       git branch: 'jan08', url: 'https://github.com/mankasoso/liontech-joinedproject.git'
+       }
+     }
+
+      stage("maven-buildc"){
+       steps{
+         sh "echo 'running junit test on the source code'"
+         sh "echo 'maven is packaging the source code'"
+         sh "mvn install"
+         sh "mvn test"
+         sh "mvn verify"
+         sh "mvn validate"
+         sh "mvn clean package"
+       }
+     }
+   }
+}
