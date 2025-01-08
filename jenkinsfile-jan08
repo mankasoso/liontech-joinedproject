@@ -23,5 +23,18 @@ pipeline{
          sh "mvn clean package"
        }
      }
+
+    // stage('code quality analysis'){
+      // steps{
+        // sh "echo 'sonarqube code quality inspection'"
+         //sh "mvn sonar:sonar"
+       //}
+     //}
+
+     stage('uploadartifacttone'){
+       steps{
+         sh "mvn deploy"
+       }
+     }
    }
 }
